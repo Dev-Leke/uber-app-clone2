@@ -1,16 +1,8 @@
-import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-  Image,
-} from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { View, Text } from "react-native";
 
 export default function AccountScreen() {
   return (
+<<<<<<< HEAD
     <ScrollView
       style={styles.container}
       showsVerticalScrollIndicator={false}
@@ -88,121 +80,10 @@ export default function AccountScreen() {
         />
       </View>
     </ScrollView>
+=======
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>Account Screen (placeholder)</Text>
+    </View>
+>>>>>>> parent of 0136287 (activity and account screen)
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#f7f7f7",
-    paddingHorizontal: 20,
-    paddingTop: 30,
-  },
-
-  header: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    marginBottom: 30,
-  },
-
-  firstName: {
-    fontSize: 36,
-    fontWeight: "900",
-  },
-
-  lastName: {
-    fontSize: 36,
-    fontWeight: "900",
-    marginTop: -5,
-  },
-
-  ratingBadge: {
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "#eaeaea",
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: 8,
-    marginTop: 10,
-    alignSelf: "flex-start",
-  },
-
-  ratingText: {
-    marginLeft: 6,
-    fontSize: 14,
-    fontWeight: "600",
-  },
-
-  profileImage: {
-    width: 85,
-    height: 85,
-    borderRadius: 42.5,
-  },
-
-  grid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-    marginBottom: 25,
-  },
-
-  gridItem: {
-    width: "48%",
-    backgroundColor: "#eaeaea",
-    paddingVertical: 22,
-    paddingHorizontal: 20,
-    borderRadius: 18,
-    marginBottom: 15,
-  },
-
-  gridText: {
-    marginTop: 8,
-    fontSize: 16,
-    fontWeight: "500",
-  },
-
-  cardRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    backgroundColor: "#eaeaea",
-    padding: 20,
-    borderRadius: 18,
-    marginBottom: 18,
-  },
-
-  cardTextContainer: {
-    flex: 1,
-    paddingRight: 10,
-  },
-
-  cardTitle: {
-    fontSize: 17,
-    fontWeight: "600",
-  },
-
-  cardSub: {
-    marginTop: 6,
-    color: "#555",
-  },
-
-  cardImage: {
-    width: 70,
-    height: 70,
-    resizeMode: "contain",
-  },
-
-  simpleCard: {
-    backgroundColor: "#eaeaea",
-    padding: 20,
-    borderRadius: 18,
-    marginBottom: 18,
-  },
-
-  co2: {
-    marginTop: 8,
-    fontSize: 24,
-    fontWeight: "bold",
-  },
-});
