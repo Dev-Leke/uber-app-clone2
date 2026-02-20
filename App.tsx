@@ -6,13 +6,20 @@ import { Ionicons } from "@expo/vector-icons";
 
 import HomeScreen from "./src/screens/HomeScreen";
 import ServicesScreen from "./src/screens/ServicesScreen";
+import AccountScreen from "./src/screens/AccountScreen";
+import ActivityScreen from "./src/screens/ActivityScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 function Tabs() {
   return (
-    <Tab.Navigator screenOptions={{ headerShown: false }}>
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: "black",
+      }}
+    >
       <Tab.Screen
         name="Home"
         component={HomeScreen}
@@ -22,6 +29,7 @@ function Tabs() {
           ),
         }}
       />
+
       <Tab.Screen
         name="Services"
         component={ServicesScreen}
@@ -31,21 +39,43 @@ function Tabs() {
           ),
         }}
       />
+
+      <Tab.Screen
+        name="Activity"
+        component={ActivityScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="receipt-outline" size={size} color={color} />
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="Account"
+        component={AccountScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person-outline" size={size} color={color} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 }
 
-function RideDetailsScreen({ route }: any) {
-  return (
-    <></>
-  );
+function RideDetailsScreen() {
+  return null;
 }
 
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Root" component={Tabs} options={{ headerShown: false }} />
+        <Stack.Screen
+          name="Root"
+          component={Tabs}
+          options={{ headerShown: false }}
+        />
         <Stack.Screen name="RideDetails" component={RideDetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
