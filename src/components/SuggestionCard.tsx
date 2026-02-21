@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F2F2F2",
     borderRadius: 12,
     marginBottom: 12,
+    gap: 8,
   },
 
   title: {
