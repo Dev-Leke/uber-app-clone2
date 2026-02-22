@@ -15,6 +15,7 @@ export default function AccountScreen() {
       style={styles.container}
       showsVerticalScrollIndicator={false}
     >
+      {/* Header */}
       <View style={styles.header}>
         <View>
           <Text style={styles.firstName}>JOHN</Text>
@@ -31,6 +32,8 @@ export default function AccountScreen() {
           style={styles.profileImage}
         />
       </View>
+
+      {/* Quick Actions Grid */}
       <View style={styles.grid}>
         {[
           { label: "Help", icon: "help-circle-outline" },
@@ -44,6 +47,8 @@ export default function AccountScreen() {
           </TouchableOpacity>
         ))}
       </View>
+
+      {/* Try Uber One */}
       <View style={styles.cardRow}>
         <View style={styles.cardTextContainer}>
           <Text style={styles.cardTitle}>Try Uber One free</Text>
@@ -57,6 +62,8 @@ export default function AccountScreen() {
           style={styles.cardImage}
         />
       </View>
+
+      {/* Safety Checkup */}
       <View style={styles.cardRow}>
         <View style={styles.cardTextContainer}>
           <Text style={styles.cardTitle}>Safety checkup</Text>
@@ -70,10 +77,14 @@ export default function AccountScreen() {
           style={styles.cardImage}
         />
       </View>
+
+      {/* Estimated CO2 */}
       <View style={styles.simpleCard}>
         <Text style={styles.cardTitle}>Estimated CO₂ saved</Text>
         <Text style={styles.co2}>0 g</Text>
       </View>
+
+      {/* Invite Friends */}
       <View style={styles.cardRow}>
         <View style={styles.cardTextContainer}>
           <Text style={styles.cardTitle}>Invite friends to Uber</Text>

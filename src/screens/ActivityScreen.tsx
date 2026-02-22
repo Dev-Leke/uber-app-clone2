@@ -11,8 +11,7 @@ import { Ionicons } from "@expo/vector-icons";
 export default function ActivityScreen() {
   return (
     <ScrollView style={styles.container}>
-     
-      <Text style={styles.title}>Activity</Text>
+    <Text style={styles.title}>Activity</Text>
       <Text style={styles.sectionTitle}>Upcoming</Text>
       <View style={styles.card}>
         <View style={styles.upcomingRow}>
@@ -34,7 +33,8 @@ export default function ActivityScreen() {
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Rebook</Text>
         </TouchableOpacity>
-      </View><View style={styles.card}>
+      </View>
+      <View style={styles.card}>
         <Text style={styles.location}>Canadian Brewhouse</Text>
         <Text style={styles.details}>Jan 18 • 6:42 p.m.</Text>
         <Text style={styles.price}>$19.98</Text>

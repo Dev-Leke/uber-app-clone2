@@ -1,5 +1,12 @@
 import React from "react";
-import { FlatList, SafeAreaView, StyleSheet, Text, View, Pressable } from "react-native";
+import {
+  FlatList,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  Pressable,
+} from "react-native";
 import ServiceCard from "../components/ServiceCard";
 import { deliveries, goAnywhere, ServiceItem } from "../data/servicesData";
 
@@ -15,7 +22,9 @@ export default function ServicesScreen({ navigation }: any) {
         keyExtractor={(item) => item.id}
         numColumns={2}
         contentContainerStyle={styles.list}
-        renderItem={({ item }) => <ServiceCard item={item} onPress={() => openDetails(item)} />}
+        renderItem={({ item }) => (
+          <ServiceCard item={item} onPress={() => openDetails(item)} />
+        )}
         ListHeaderComponent={
           <View style={styles.header}>
             <Text style={styles.h1}>Services</Text>
@@ -23,7 +32,9 @@ export default function ServicesScreen({ navigation }: any) {
 
             <View style={styles.banner}>
               <View style={styles.bannerLeft}>
-                <Text style={styles.bannerTitle}>Group Rides: ride together, up to 5 stops</Text>
+                <Text style={styles.bannerTitle}>
+                  Group Rides: ride together, up to 5 stops
+                </Text>
                 <Pressable style={styles.bannerBtn}>
                   <Text style={styles.bannerBtnText}>Try group rides</Text>
                 </Pressable>
@@ -40,7 +51,9 @@ export default function ServicesScreen({ navigation }: any) {
               keyExtractor={(item) => item.id}
               numColumns={2}
               scrollEnabled={false}
-              renderItem={({ item }) => <ServiceCard item={item} onPress={() => openDetails(item)} />}
+              renderItem={({ item }) => (
+                <ServiceCard item={item} onPress={() => openDetails(item)} />
+              )}
             />
             <View style={{ height: 20 }} />
           </View>
@@ -76,6 +89,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   bannerBtnText: { fontWeight: "700" },
-  bannerRight: { width: 140, backgroundColor: "rgba(255,255,255,0.25)" },
+  bannerRight: { width: 140, backgroundColor: "#ffffff40" },
   footer: { paddingHorizontal: 16, paddingTop: 12 },
 });
