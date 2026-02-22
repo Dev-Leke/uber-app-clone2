@@ -8,6 +8,7 @@ import HomeScreen from "./src/screens/HomeScreen";
 import ServicesScreen from "./src/screens/ServicesScreen";
 import AccountScreen from "./src/screens/AccountScreen";
 import ActivityScreen from "./src/screens/ActivityScreen";
+import RideDetailsScreen from "./src/screens/RideDetailsScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -63,20 +64,12 @@ function Tabs() {
   );
 }
 
-function RideDetailsScreen() {
-  return null;
-}
-
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
-          name="Root"
-          component={Tabs}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen name="RideDetails" component={RideDetailsScreen} />
+        <Stack.Screen name="Root" component={Tabs} options={{ headerShown: false }} />
+        <Stack.Screen name="RideDetails" component={RideDetailsScreen} options={{ title: "Ride Details" }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
